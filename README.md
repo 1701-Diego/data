@@ -2,7 +2,7 @@
 
 ## Diego API Docs
 
-Here's an outline of the API docs (all subject to change of course):
+Diego provides a RESTful API for running Tasks and Long Running Processes.  Here's an outline of the API docs (all subject to change of course):
 
 - [API Overview](overview.md)
 - [Understanding Tasks](tasks.md)
@@ -13,6 +13,12 @@ Here's an outline of the API docs (all subject to change of course):
     - [Tasks](api_tasks.md)
     - [LRPs](api_lrps.md)
     - [Cells](api_cells.md)
+
+We recommend using the API client provided by Diego's Receptor here:
+
+https://github.com/cloudfoundry-incubator/receptor
+
+[laforge](#laforge) has some example usages.
 
 ## Hackathon Resources
 
@@ -25,6 +31,8 @@ export RECEPTOR=http://username:password@receptor.ketchup.cf-app.com
 export DOPPLER=wss://doppler.ketchup.cf-app.com:4443
 ```
 
+we'll be providing the `username` and `password` at stand-up.
+
 For Diego-Edge:
 
 ```
@@ -35,14 +43,19 @@ export DOPPLER=ws://doppler.192.168.11.11.xip.io
 ### Hackathon Rules
 
 Diego doesn't have a multi-tenant API (CC provides that) so:
+
 - Pick a `domain` for your team and use only that `domain`
 - Don't mess with other people's Tasks and LRPs
-- Be sure to specify your docker image correctly: `docker:///onsi/away-team` -- note the *three* leading slashes.  Diego has an irritating bug when you don't specify `docker:///` and we may not fix it by the hackathon.
+- Be sure to specify your docker image correctly:
+  `docker:///onsi/away-team` -- note the *three* leading slashes.
+  
+  Diego has an irritating bug when you don't specify `docker:///` and we may not fix it by the hackathon.
+- Try things on Diego-Edge first.
 - Be kind :)
 
 ### Diego-Edge
 
-Diego-Edge is a liteweight packaged up version of Diego that you can deploy locally.  We recommend using Diego-Edge to tinker and explore before pushing work up to Ketchup.
+Diego-Edge is a lightweight packaged up version of Diego that you can deploy locally.  We recommend using Diego-Edge to tinker and explore before pushing work up to Ketchup.
 
 To run Diego-Edge:
 
@@ -85,7 +98,7 @@ laforge help
 
 #### [`troy`](https://github.com/1701-diego/troy)
 
-`troy` can fetch information about your Tasks and LRPs. 
+`troy` can fetch and display information about your Tasks and LRPs. 
 
 ```
 go get github.com/1701-diego/troy
