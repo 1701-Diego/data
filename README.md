@@ -112,12 +112,12 @@ troy DOMAIN
 
 #### [`worf`](https://github.com/1701-diego/worf)
 
-`worf` can delete Tasks and LRPs
+`worf` can destroy Tasks and LRPs
 
 ```
 go get github.com/1701-diego/worf
-worf delete-task TASK_GUID
-worf delete-lrp LRP_GUID
+worf destroy-task TASK_GUID
+worf destroy-lrp LRP_GUID
 ```
 
 ### Things that run in Containers
