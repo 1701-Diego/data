@@ -31,7 +31,7 @@ export RECEPTOR=http://username:password@receptor.ketchup.cf-app.com
 export DOPPLER=wss://doppler.ketchup.cf-app.com:4443
 ```
 
-we'll be providing the `username` and `password` at stand-up.
+we'll be providing the `username` and `password` at SF's stand-up.
 
 For Diego-Edge:
 
@@ -53,7 +53,7 @@ Diego doesn't have a multi-tenant API (CC provides that) so:
 
 ### Diego-Edge
 
-Diego-Edge is a lightweight packaged up version of Diego that you can deploy locally.  We recommend using Diego-Edge to tinker and explore before pushing work up to Ketchup.
+[Diego-Edge](https://github.com/pivotal-cf-experimental/diego-edge) is a lightweight packaged up version of Diego that you can deploy locally.  We recommend using Diego-Edge to tinker and explore before pushing work up to Ketchup.
 
 To run Diego-Edge:
 
@@ -63,7 +63,7 @@ cd diego-edge
 vagrant up --provider=virtualbox
 ```
 
-You can then use the Diego-Edge CLI:
+You can then use the [Diego-Edge CLI](https://github.com/pivotal-cf-experimental/diego-edge-cli):
 
 ```
 go get github.com/pivotal-cf-experimental/diego-edge-cli
@@ -74,7 +74,14 @@ Or any of the various tools outlined below.
 
 ### Tools to interact with Diego
 
-These assume you have [go](http://golang.org/doc/install#osx) installed
+These assume you have [go](http://golang.org/doc/install#osx) installed.  You'll also need a working gopath:
+
+```
+mkdir $HOME/go
+export GOPATH=$HOME/go
+```
+
+will get you started.
 
 #### [`picard`](https://github.com/1701-diego/picard)
 
