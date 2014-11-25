@@ -72,6 +72,8 @@ diego-edge-cli help
 
 Or any of the various tools outlined below.
 
+> Diego-Edge is currently missing some additional configuration: you cannot run privileged Tasks and LRPs and you don't have access to the `CF_INSTANCE_IP` networking environment variables.  We hope to have this fixed by early Tuesday morning.
+
 ### Tools to interact with Diego
 
 These assume you have [go](http://golang.org/doc/install#osx) installed.  You'll also need a working gopath:
