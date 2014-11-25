@@ -47,10 +47,7 @@ Diego doesn't have a multi-tenant API (CC provides that) so:
 - Pick a `domain` for your team and use only that `domain`
 - Don't mess with other people's Tasks and LRPs
 - Don't try to DOS the receptor.  Just don't.  Please.
-- Be sure to specify your docker image correctly:
-  `docker:///onsi/away-team` -- note the *three* leading slashes.
-  
-  Diego has an irritating bug when you don't specify `docker:///` and we may not fix it by the hackathon.
+- Be sure to specify your docker image correctly: `docker:///onsi/away-team` -- note the *three* leading slashes.
 - Try things on Diego-Edge first.
 - Be kind :)
 
